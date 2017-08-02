@@ -104,35 +104,11 @@
     <div class="container">
       <div class="section-header">  
         <div class="row justify-content-md-center">
-          <div class="col-md-6">
-            <form class="text-center form-inline wow fadeInUp" data-wow-delay="0.3s">
-              <input class="mb-20 form-control" name="email" placeholder="Your Email Address">
+          <div class="col-md-6 confirmation">
+            <form class="text-center form-inline wow fadeInUp optInForm" data-wow-delay="0.3s">
+              <input class="mb-20 form-control optInEmail" name="email" placeholder="Your Email Address">
               <button class="sub_btn">subscribe</button>
             </form>
-            
-            <!-- Begin MailChimp Signup Form -->
-            <!--
-            <div id="mc_embed_signup">
-            <form action="https://lolashare.us16.list-manage.com/subscribe/post?u=b50265878e71d9f81851b02aa&amp;id=bde5d3bda5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-            	<h2>Subscribe to our mailing list</h2>
-            <div class="mc-field-group">
-            	<label for="mce-EMAIL">Email Address </label>
-            	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            	<div id="mce-responses" class="clear">
-            		<div class="response" id="mce-error-response" style="display:none"></div>
-            		<div class="response" id="mce-success-response" style="display:none"></div>
-            	</div>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b50265878e71d9f81851b02aa_bde5d3bda5" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-            </form>
-            </div>
-            -->
-
-            <!--End mc_embed_signup-->
-            
           </div>
         </div>
       </div>
@@ -140,7 +116,6 @@
   </div>
 </header>
 <!-- Header Section End --> 
-
 
 <!-- Features Section Start -->
 <section id="features" class="section">
@@ -383,7 +358,7 @@
             <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Contact <span>Us</span></h2>
             <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           </div>
-          <form id="contactForm">
+          <form id="contactForm" action="https://hook.io/lolashare/contact" method="POST">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -399,13 +374,13 @@
               </div>
               <div class="col-md-12">
                 <div class="form-group">
-                  <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                  <input type="text" placeholder="Subject" name="subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group"> 
-                  <textarea class="form-control" placeholder="Your Message" rows="11" data-error="Write your message" required></textarea>
+                  <textarea class="form-control" name="message" id="message" placeholder="Your Message" rows="11" data-error="Write your message" required></textarea>
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="submit-button text-center">
@@ -432,9 +407,9 @@
       <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Subscribe to get updates about the project.</p>
     </div>
     <div class="row justify-content-md-center">
-      <div class="col-md-8">
-        <form class="text-center form-inline wow fadeInUp" data-wow-delay="0.3s">
-          <input class="mb-20 form-control" name="email" placeholder="Your Email Address">
+      <div class="col-md-8 confirmation2" align="center">
+        <form class="text-center form-inline wow fadeInUp optInForm2" data-wow-delay="0.3s">
+          <input class="mb-20 form-control optInEmail2" name="email" placeholder="Your Email Address">
           <button class="sub_btn">subscribe</button>
         </form>
       </div>
@@ -458,8 +433,11 @@
           </ul>
         </div>
         <div class="site-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
-          <p>All copyrights reserved &copy; 2017</p>
-        </div>  
+          <p>
+            <small>All copyrights reserved &copy; 2017 - Designed & Developed by the <a rel="nofollow" href="https://github.com/lolashare">LolaShare team</a></small><br/>
+            <em><small>Want to make this site look better? <a href="https://github.com/lolashare/lolashare.com">It's open-source.</a></em></small> <br/>
+          </p>
+        </div>
       </div>
     </div>
   </div>

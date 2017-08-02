@@ -10,6 +10,58 @@ $("#contactForm").validator().on("submit", function (event) {
     }
 });
 
+$(".optInForm").on("submit", function (event) {
+    var email = $(".optInEmail").val();
+    optIn(email, '.confirmation');
+    return false;
+});
+
+$(".optInForm2").on("submit", function (event) {
+    var email = $(".optInEmail2").val();
+    optIn(email, '.confirmation2');
+    return false;
+});
+
+function hideOptIn (msg, which) {
+  $('.optInForm').addClass('fadeOutUp');
+  if (typeof msg === 'undefined') {
+    msg = 'Thank you, we\'ll be in touch.';
+  }
+  $(which).html('<h2>' + msg + '</h2>');
+}
+
+function optIn (email, resultDiv) {
+  // Initiate Variables With Form Content
+
+  $.ajax({
+      type: "POST",
+      url: "https://hook.io/lolashare/signups",
+      data: "email=" + email,
+      success : function(rsp){
+          console.log(rsp, typeof rsp)
+          try  {
+            rsp = JSON.parse(rsp)
+          } catch (err) {
+            rsp = {
+              message: 'error occurred'
+            }
+          }
+          if (typeof rsp === 'object') {
+            if (rsp.statusCode == 201){
+              if(rsp.body.error_count === 0) {
+                hideOptIn(undefined, resultDiv);
+              } else {
+                hideOptIn(rsp.body.errors[0].message, resultDiv);
+              }
+            } else {
+              hideOptIn('failure', resultDiv);
+            }
+          } else {
+            hideOptIn('failure', resultDiv);
+          }
+      }
+  });
+}
 
 function submitForm(){
     // Initiate Variables With Form Content
@@ -18,17 +70,29 @@ function submitForm(){
     var msg_subject = $("#msg_subject").val();
     var message = $("#message").val();
 
-
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
+        url: "https://hook.io/lolashare/contact",
+        data: "name=" + name + "&email=" + email + "&subject=" + msg_subject + "&comment=" + message,
+        success : function(rsp){
+            console.log(rsp, typeof rsp)
+            try  {
+              rsp = JSON.parse(rsp)
+            } catch (err) {
+              rsp = {
+                message: 'error occurred'
+              }
+            }
+            if (typeof rsp === 'object') {
+              if (rsp.statusCode == 202){
+                  formSuccess();
+              } else {
+                  formError();
+                  submitMSG(false,'error in signup');
+              }
             } else {
-                formError();
-                submitMSG(false,text);
+              formError();
+              submitMSG(false,rsp.message);
             }
         }
     });
