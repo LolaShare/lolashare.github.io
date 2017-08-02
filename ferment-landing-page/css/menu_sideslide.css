@@ -73,11 +73,16 @@
 	box-shadow: -1px 2px 3px 0px rgba(0, 0, 0, 0.16), 0 0px 0px 0px rgba(0, 0, 0, 0.12);
 }
 
+img{
+	margin-bottom: 10px;
+}
+
+
 .logo-menu{
-	padding: 15px 0;
+	padding: 6px 0;
 }
 .menu-bg .logo-menu{
-	padding: 6px 0;
+	padding: 3px 0;
 }
 .menu-bg .menu-button{
 	top: 5px;

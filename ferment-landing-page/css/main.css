@@ -9,8 +9,8 @@ body {
   overflow-x: hidden;
 }
 p {
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 25px;
+  line-height: 30px;
 }
 a:hover,
 a:focus {
@@ -129,7 +129,7 @@ a:not([href]):not([tabindex]):hover {
 .section-header .section-subtitle {
   margin-top: 15px;
   color: #333;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
 }
 .section-header .lines {
@@ -158,7 +158,7 @@ Navbar Style
   background-color: #fff;
 }
 .logo-menu a {
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
 }
 .menu-bg {
@@ -310,6 +310,13 @@ Video Background
 #video-area {
   overflow: hidden;
   position: relative;
+/*  background:black;
+*/
+  background-image: url(../img/image.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -20px;
+
 }
 #video-area .contents {
   padding: 160px 0 0px;
@@ -322,7 +329,7 @@ Video Background
   line-height: 70px;
 }
 #video-area .contents p {
-  font-size: 14px;
+  font-size: 20px;
   color: #fff;
   font-weight: 400;
   line-height: 30px;
@@ -346,9 +353,9 @@ Video Background
 #video-area .banner_bottom_btn i:hover {
   color: #4676fa;
 }
-.overlay-2 {
-  background: rgba(0, 0, 0, 0.7) !important;
-}
+/*.overlay-2 {
+
+}*/
 div#subscribe{
   padding-bottom: 40px;
 }
@@ -392,9 +399,9 @@ transition: all 0.3s ease 0s;
   color: #4676fa;
 }
 .item-boxes h4 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #features {
@@ -534,8 +541,18 @@ Video promo Style
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #4676fa;
-  opacity: 0.7;
+  background: steelblue;
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+.overlay3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: steelblue;
+  opacity: .3;
   filter: alpha(opacity=70);
 }
 /* ==========================================================================
