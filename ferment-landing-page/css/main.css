@@ -701,7 +701,8 @@ Contact Us
   width: 100%;
   margin-bottom: 20px;
   padding: 18px;
-  color: #fff;
+  /* color: #fff; */
+  /* previous style was causing text to disappear on focus out, removing style appears to fix it */
   font-size: 14px;
   border-radius: 4px;
   -webkit-transition: all 0.3s;
