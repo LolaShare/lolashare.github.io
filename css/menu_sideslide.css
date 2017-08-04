@@ -97,6 +97,7 @@ img{
 	right: 0;
 	height: 100%;
 	background: #fff;
+	margin-top: 20px;
 	padding: 2.5em 1.5em 0;
 	font-size: 1.15em;
 	-webkit-transform: translate3d(320px,0,0);
