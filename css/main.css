@@ -159,13 +159,15 @@ Navbar Style
 }
 .logo-menu a {
   font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   color: #fff;
 }
 .menu-bg {
   background-color: #fff!important;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
   z-index: 999;
-  padding: 3px;
+  padding-top: 3px;
 }
 .menu-bg .menu-button {
   top: 0;
@@ -312,10 +314,10 @@ Video Background
   position: relative;
 /*  background:black;
 */
-  background-image: url(../img/image.jpg) !important;
+  background: url(../img/image.jpg) fixed;
   background-repeat: no-repeat;
-  background-size: 100%;
   margin-top: -20px;
+background-size: cover;
 
 }
 #video-area .contents {
@@ -323,10 +325,9 @@ Video Background
 }
 #video-area .contents h1 {
   color: #fff;
-  font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 25px;
-  line-height: 70px;
+  font-size: 130px;
+  font-weight: 500;
+ 
 }
 #video-area .contents p {
   font-size: 20px;
