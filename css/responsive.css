@@ -3,8 +3,9 @@
     font-size: 22px;
   }
   #video-area .contents h1 {
-    font-size: 32px;
+    font-size: 100px;
     line-height: 48px;
+    margin-bottom: 35px;
   }
   .navbar-light .navbar-nav .nav-link {
     padding: 8px 0px;
@@ -74,8 +75,10 @@
     padding: 80px 0 60px;
   }
   #video-area .contents h1 {
-    font-size: 18px;
+    font-size: 80px;
     line-height: 32px;
+    margin-top: 100px;
+    margin-bottom: 25px;
   }
   .video-promo .video-promo-content h2 {
     font-size: 18px;
